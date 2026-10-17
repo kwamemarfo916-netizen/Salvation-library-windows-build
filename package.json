@@ -1,0 +1,38 @@
+{
+  "name": "salvation-library",
+  "productName": "Salvation Library",
+  "version": "1.0.0",
+  "description": "Music, books and Bibles from Horn of Salvation Cathedral.",
+  "main": "main.js",
+  "author": "Horn of Salvation Cathedral",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --publish never"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "org.hornofsalvation.salvationlibrary",
+    "productName": "Salvation Library",
+    "files": [
+      "main.js",
+      "index.html",
+      "icon.ico",
+      "icon.png"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
